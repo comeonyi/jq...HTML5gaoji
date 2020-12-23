@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			canvas{
+				border: 3px solid deeppink;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id="c" width="500" height="500"></canvas>
+	</body>
+	<script type="text/javascript">
+		var c = document.getElementById("c");
+		var cxt=c.getContext("2d");
+		//径向渐变
+		var col=cxt.createRadialGradient(250,250,50,250,250,200);
+		col.addColorStop(0,'red');
+		col.addColorStop(0.3,'orange');
+		col.addColorStop(0.5,'yellow');
+		col.addColorStop(0.8,'blue');
+		col.addColorStop(1,'green');
+		cxt.strokeStyle=col;
+		//矩形里面
+		cxt.fillStyle='white';
+		cxt.fillRect(0,0,500,500);
+		
+		//圆里面
+		cxt.arc(250,250,250,0,Math.PI*2,false);
+		cxt.fillStyle=col;
+		cxt.fill();
+		cxt.stroke();
+		
+	</script>
+</html>

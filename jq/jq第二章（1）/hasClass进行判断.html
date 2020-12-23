@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>hasClass进行判断</title>
+		<style type="text/css">
+			.a{
+				border: 1px solid blue;
+			}
+			.b{
+				color: red;
+			}
+		</style>
+	</head>
+	<body>
+		<p>欢迎学习jq</p>
+		<button id="one">判断</button>
+	</body>
+	<script src="js/bookStyle.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(function(){
+			
+			$('#one').click(function(){
+				
+				if($('p').hasClass('a')){
+					$('p').addClass('b');
+				}
+				if(!$('p').hasClass('a')){
+					$('p').removeClass('b');
+				}
+			})
+		})
+	</script>
+</html>

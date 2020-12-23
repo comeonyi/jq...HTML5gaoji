@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			canvas{
+				border: 5px solid pink;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id="canvas" width="500" height="500"></canvas>
+	</body>
+	<script type="text/javascript">
+//		//步骤1.在body里面    添加canvas标签  包含ID     宽和高（默认300*150）
+//		//2.获取canvas对象
+//		var ca=document.getElementById('ca');
+//		console.log(ca);
+//		//3.创建2d画布
+//		var cxt=c.getContext('2d');
+//		cxt.moveTo(20,20);
+//		cxt.lineTo(200,200);
+		   var canvas=document.getElementById('canvas');
+        var c_2d=canvas.getContext('2d');
+//      等腰
+        c_2d.beginPath();
+        c_2d.moveTo(100,0);
+        c_2d.lineTo(0,100);
+        c_2d.lineTo(100,100);
+        c_2d.fillStyle='blue';
+        c_2d.fill();
+        c_2d.closePath();
+        c_2d.stroke();
+//      c_2d.stroke();
+//      等角 是两个等腰三角形
+        c_2d.beginPath();
+        c_2d.moveTo(180,0);
+        c_2d.lineTo(120,120);
+        c_2d.lineTo(240,120);
+        c_2d.fillStyle='red';
+        c_2d.fill();
+        c_2d.closePath();
+        c_2d.stroke();
+	</script>
+</html>

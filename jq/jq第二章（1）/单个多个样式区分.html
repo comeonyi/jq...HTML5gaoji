@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>单个多个样式区分</title>
+	</head>
+	<body>
+		<p>欢迎学习jq</p>
+	</body>
+	<script src="js/bookStyle.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(function(){
+			//单个样式
+//			$('p').css('color','red');
+		//多个样式
+			$('p').css({'color':'red','background':'blue'});
+		})
+	</script>
+</html>

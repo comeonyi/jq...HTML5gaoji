@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>三角形</title>
+		<style type="text/css">
+			canvas{
+				border: 1px solid blue;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id="c" width="500" height="500"></canvas>
+	</body>
+	<script type="text/javascript">
+		var c=document.getElementById("c");
+		var cxt=c.getContext('2d');
+		//等边
+		cxt.beginPath();
+		cxt.moveTo(0,173);
+		cxt.lineTo(100,0);
+		cxt.lineTo(200,173);
+		cxt.lineTo(0,173);
+		cxt.strokeStyle='blue';
+		cxt.lineWidth=3;
+		cxt.fillStyle='yellow';
+		cxt.fill();
+		cxt.stroke();
+		cxt.closePath();
+		//等腰
+		cxt.beginPath();
+		cxt.moveTo(500,0);
+		cxt.lineTo(500,200);
+		cxt.lineTo(300,200);
+		cxt.lineTo(500,0);
+		cxt.strokeStyle='green';
+		cxt.lineWidth=3;
+		cxt.fillStyle='red';
+		cxt.fill();
+		cxt.stroke();
+		cxt.closePath();
+	</script>
+</html>

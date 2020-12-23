@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>圆</title>
+        <style type="text/css">
+            #c{
+                border: 3px solid black;
+            }
+        </style>
+    </head>
+    <body>
+        <canvas id="c" width="500" height="500"></canvas>
+    </body>
+    <script type="text/javascript">
+        var c=document.getElementById('c');
+        var tet=c.getContext('2d');
+        tet.beginPath();
+        tet.arc(50,50,40,0,Math.PI/2,false);
+        tet.fillStyle='yellowgreen';
+        tet.fill();
+        tet.strokeStyle='yellowgreen';
+        tet.stroke();
+        tet.closePath();
+         
+        tet.beginPath();
+        tet.arc(200,50,40,0,Math.PI/2,true);
+        tet.fillStyle='yellowgreen';
+        tet.fill();
+        tet.strokeStyle='yellowgreen';
+        tet.stroke();
+        tet.closePath();
+         
+        tet.beginPath();
+        tet.arc(50,200,40,0,Math.PI*3/2,false);
+        tet.fillStyle='yellowgreen';
+        tet.fill();
+        tet.strokeStyle='yellowgreen';
+        tet.stroke();
+        tet.closePath();
+         
+        tet.beginPath();
+        tet.arc(200,200,40,0,Math.PI*3/2,true);
+        tet.fillStyle='yellowgreen';
+        tet.fill();
+        tet.strokeStyle='yellowgreen';
+        tet.stroke();
+        tet.closePath();
+    </script>
+</html>

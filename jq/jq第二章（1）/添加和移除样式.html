@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>添加和移除样式</title>
+		<style type="text/css">
+			.a{
+				color: blue;
+			}
+		</style>
+	</head>
+	<body>
+		<p>欢迎学习jq</p>
+		<button id="one">添加</button>
+		<button id="two">移除</button>
+	</body>
+	<script src="js/bookStyle.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('#one').click(function(){
+				$('p').addClass('a');
+			})
+			$('#two').click(function(){
+				$('p').removeClass('a');
+			})
+		})
+	</script>
+</html>

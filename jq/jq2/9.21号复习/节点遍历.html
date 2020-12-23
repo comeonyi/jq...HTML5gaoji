@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>节点遍历</title>
+	</head>
+	<body>
+		<div class="">
+			<ul>
+				<li>3030</li>
+				<li>1323</li>
+				<li>13103</li>
+				<li>313</li>
+				<li>1313</li>
+				<li>1313</li>
+				<li>161</li>
+			</ul>	
+			<p>21603013</p>
+			
+		</div>
+		
+		<script src="js/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				//children()方法可以用来获取元素的所有子元素
+//				$('ul').children().css('color','red');
+//				prev()用于获取紧邻匹配元素之前的元素
+//				$('li:eq(1)').prev().css('color','red');
+//				next()用于获取紧邻匹配元素之后的元素
+//				$('li:eq(1)').next().css('color','red');
+//				siblings()用于获取获取位于元素前面和后面的所有同辈元素
+//				$('li:eq(1)').siblings().css('color','red');
+				//parent()获取元素的父级元素
+//				$('li:eq(1)').parent().css('color','red');
+				//parents()获取元素的祖先元素
+				$('li:eq(1)').parents().css('color','red');
+				
+			})
+		</script>
+	</body>
+</html>

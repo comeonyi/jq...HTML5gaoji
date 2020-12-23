@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>筋斗云</title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			ul{
+				width: 500px;
+				height: 40px;
+				list-style: none;
+				background: greenyellow;
+			}
+			li{
+				width: 100px;
+				height: 40px;
+				float: left;
+				text-align: center;
+				line-height: 40px;
+				position: relative;
+				cursor: pointer;
+			}
+			#a{
+				background: red;
+			}
+		</style>
+	</head>
+	<body>
+		<ul>
+			<li id="a"></li>
+			<li>首页</li>
+			<li>详情页</li>
+			<li>联系我们</li>
+			<li>关于我们</li>
+		</ul>
+	</body>
+	<script src="js/jquery1.4.0jquery.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('li').hover(function(){
+				var index=$(this).index();
+				var wi=$('#a').width();
+//				console.log(index);
+//				console.log(wi);
+				$('#a').stop().animate({left:index*wi+'px'},500);
+			},function(){
+				$('#a').stop().animate({left:'0px'},500);
+			})
+		})
+	</script>
+</html>

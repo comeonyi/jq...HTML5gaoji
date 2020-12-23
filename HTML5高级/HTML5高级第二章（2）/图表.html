@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>图表</title>
+        <script src="https://cdn.bootcdn.net/ajax/libs/echarts/4.8.0/echarts-en.common.min.js" type="text/javascript" charset="utf-8"></script>
+    </head>
+    <body>
+        <div id="main" style="width: 600px;height:400px;"></div>
+        <script type="text/javascript">
+             var myChart = echarts.init(document.getElementById('main'));
+            var option = {
+                title: {
+                    text: '2019年度期末考试各组平均分成绩'
+                },
+                tooltip: {},
+                legend: {
+                    data:['成绩']
+                },
+                xAxis: {
+                    data: ["第一组","第二组","第三组","第四组","第五组","第六组"]
+                },
+                yAxis: {},
+                series: [{
+                    name: '平均分',
+                    type: 'bar',
+                    data: [90, 70, 67, 80, 98, 61]
+                }]
+            };
+            myChart.setOption(option);
+    </script>
+    </body>
+     
+     
+</html>

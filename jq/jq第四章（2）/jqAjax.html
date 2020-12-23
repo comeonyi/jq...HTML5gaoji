@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<p></p>
+		<button>提交</button>
+	</body>
+	<script src="js/jquery-1.12.4.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('button').click(function(){
+				var txt=$.ajax({
+					type:'get',
+					url:'txt/new_file.txt',
+					async:false    //true:同步      false:异步
+				});
+				console.log(txt);
+				$('p').html(txt.responseText);
+			})
+		})
+	</script>
+</html>

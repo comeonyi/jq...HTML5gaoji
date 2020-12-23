@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			canvas{
+				border: 3px solid deeppink;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id="c" width="500" height="500"></canvas>
+	</body>
+	<script type="text/javascript">
+		var c = document.getElementById("c");
+		var cxt=c.getContext("2d");
+		
+//		设置渐变
+//		线性渐变
+		var col=cxt.createLinearGradient(0,0,500,500);
+		col.addColorStop(0,'red');
+		col.addColorStop(0.3,'orange');
+		col.addColorStop(0.5,'yellow');
+		col.addColorStop(0.8,'blue');
+		col.addColorStop(1,'green');
+//		直线
+		cxt.moveTo(0,0);
+		cxt.lineTo(500,500);
+		cxt.strokeStyle=col;
+		cxt.lineWidth='3';
+//		矩形渐变
+		cxt.fillStyle='white';
+		cxt.fillRect(0,0,500,500);
+		cxt.stroke();
+	
+	</script>
+</html>

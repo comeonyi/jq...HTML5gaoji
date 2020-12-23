@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	<style type="text/css">
+			canvas{
+				border: 1px solid blue;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id="c" width="500" height="500"></canvas>
+	</body>
+	<script type="text/javascript">
+		var c=document.getElementById("c");
+		var cxt=c.getContext('2d');
+		cxt.beginPath();
+		cxt.moveTo(25,100);
+		var a=80;
+		var b=300;
+		c.onmousemove=function(){
+			a++;
+			console.log(a);
+			cxt.quadraticCurveTo(a,b,180,100);
+			cxt.stroke();
+			cxt.closePath();
+		}
+		
+	</script>
+</html>

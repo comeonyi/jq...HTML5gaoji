@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>画板</title>
+		<style type="text/css">
+			canvas{
+				border: 1px solid blue;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id="c" width="500" height="500"></canvas>
+	</body>
+	<script type="text/javascript">
+		var c=document.getElementById("c");
+		var cxt=c.getContext('2d');
+		console.log(c.offsetLeft);
+		c.onmousedown=function(e){
+			var x=e.clientX-c.offsetLeft;
+			var y=e.clientY-c.offsetTop;
+			cxt.moveTo(x,y);
+			c.onmousemove=function(e){
+				console.log(2);
+				var xx=e.clientX-c.offsetLeft;
+				var yy=e.clientY-c.offsetTop;
+				cxt.lineTo(xx,yy);
+				cxt.lineWidth=3;
+				cxt.strokeStyle='green';
+				cxt.stroke();
+			}
+		}
+		c.onmouseup=function(){
+			c.onmousemove=null;
+		}
+	</script>
+</html>

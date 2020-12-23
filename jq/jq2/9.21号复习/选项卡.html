@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			ul{
+				list-style: none;
+			}
+			.big{
+				width: 600px;
+				height: 300px;
+				border: 1px solid black;
+			}
+			ul{
+				width: 600px;
+				height: 50px;
+			}
+			ul>li{
+				float: left;
+				background: red;
+				width: 200px;
+				height: 50px;
+				text-align: center;
+				line-height: 50px;
+				cursor: pointer;
+			}
+			.xiao>div{
+				width: 600px;
+				
+				height: 250px;
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="big">
+			<ul>
+				<li>语文
+				</li>
+				<li>数学
+				</li>
+				<li>英语				
+				</li>
+			</ul>
+			<div class="xiao">
+				<div>
+					165161303
+				</div>
+				<div>
+					61261030
+				</div>
+				<div>
+					95+6163
+				</div>
+			</div>
+			
+		</div>
+	</body>
+	<script src="js/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$('ul>li').click(function(){
+			var a=$(this).index();
+			$(this).css('color','white');
+			$(this).siblings().css('color','black');
+			$('.xiao>div').eq(a).show();
+			$('.xiao>div').eq(a).siblings().hide();
+		})
+	</script>
+</html>

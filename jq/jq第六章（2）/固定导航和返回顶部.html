@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			div{
+				width: 100%;
+				height: 3000px;
+			}
+			h1{
+				width: 100%;
+				height: 300px;
+				background: blue;
+				position: relative;
+			}
+			header{
+				width: 100%;
+				height: 50px;
+				background: red;
+				position: absolute;
+				top: 300px;
+			}
+			p{
+				width: 50px;
+				height: 50px;
+				line-height: 50px;
+				text-align: center;
+				background: red;
+				position: fixed;
+				color: white;
+				right: 50px;
+				bottom: 50px;
+				display: none;
+				cursor: pointer;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<h1></h1>
+			<header>导航</header>
+			<p>▲</p>
+		</div>
+	</body>
+	<script src="js/bookStyle.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(function(){
+			//鼠标滚轮滚动事件
+			$(document).scroll(function(){
+				//得到被卷区的距离
+				var cheng=$(document).scrollTop();
+				console.log(cheng);
+				if (cheng>=300) {
+					$('header').stop().animate({top:cheng},150);
+					$('p').slideDown();
+				} else{
+					$('header').stop().animate({top:300+'px'},20);
+					$('p').slideUp();
+				}
+				$('p').click(function(){
+					$(document).scrollTop(0);
+					$('html,body').animate({scrollToP:0},500);
+				})
+			})
+		})
+	</script>
+</html>

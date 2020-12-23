@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>平行线</title>
+		<style type="text/css">
+			canvas{
+				border: 1px solid blue;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id="c" width="500" height="500"></canvas>
+	</body>
+	<script type="text/javascript">
+		var c=document.getElementById("c");
+		var cxt=c.getContext('2d');
+		//第一条
+		cxt.beginPath();
+		cxt.moveTo(300,50);
+		cxt.lineTo(200,150);
+		cxt.stroke();
+		cxt.closePath();
+		//第二条
+		cxt.beginPath();
+		cxt.moveTo(100,50);
+		cxt.lineTo(0,150);
+		cxt.stroke();
+		cxt.closePath();
+	</script>
+</html>

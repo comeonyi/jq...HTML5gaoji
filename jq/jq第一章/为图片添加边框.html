@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>为图片添加边框</title>
+        <style type="text/css">
+            *{
+                margin: 0 auto;
+                padding: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <img src="img/pic1.gif"/>
+        <button id="a">添加边框</button>
+        <button id="b">清除边框</button>
+    </body>
+    <script src="js/bookStyle.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+        $(function(){
+            $('#a').click(function(){
+                $('img').css('border','1px solid red');
+            })
+            $('#b').click(function(){
+                $('img').css('border','none');
+            })
+        })
+    </script>
+</html>

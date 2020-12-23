@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style>
+#wrap{
+	position: relative;
+	padding: 10px;
+	overflow: hidden;
+	margin: 0 auto;
+	width: 600px;
+}
+        </style>
+	</head>
+	<body>
+ 
+  <div id="wrap">
+   <div>
+    <p>Gordon developed his own stitching technique, which made the garments more durable, cost effective and less labor intensive. He employed machinists, moved the operation into a factory, set up a distribution network and sponsored a team of renowned Australian surfers. The business thrived.</p>
+    <p>Since those beginnings, Billabong has expanded its product range to include boardsport products such as wetsuits, watches, surfboards, snowboard outerwear and skateboarding apparel.</p>
+   </div>
+   <div id="gradient"></div>
+  </div>
+  <div id="read-more"></div>
+	</body>
+	<script src="9.21号复习/js/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    $(function(){
+ 		var slideHeight = 70; // px
+		var defHeight = $('#wrap').height();
+		if(defHeight >= slideHeight){
+  			$('#wrap').css('height' , slideHeight + 'px');
+  			$('#read-more').append('<a href="#">点击查看更多。。</a>');
+  			$('#read-more a').click(function(){
+   			var curHeight = $('#wrap').height();
+   		if(curHeight == slideHeight){
+    		$('#wrap').animate({
+     		height: defHeight
+    	}, "normal");
+    		$('#read-more a').html('点击隐藏');
+    	$('#gradient').fadeOut();
+   		}else{
+    	$('#wrap').animate({
+     	height: slideHeight
+    	}, "normal");
+    	$('#read-more a').html('点击查看更多。。');
+    	$('#gradient').fadeIn();
+   		}
+   		return false;
+  		});  
+ 		}
+	});
+</script>
+</html>
